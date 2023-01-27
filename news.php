@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Reflection Feedback - HTML & CSS </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./scss/style.scss">
+
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.css">
+  <link href="css/all.min.css" rel="stylesheet">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+ 
+  <?php
+include ('./header.php');
+?>
+
+<div class="container news">News</div>
+<div class="container articles">
+
+
+
+      
+        <?php
+            require_once('./database.php');
+require_once('./functions.php');
+            $random = random_catalog_array();
+            foreach ($random as $item) {
+                echo get_item_html($item);
+            }
+            ?>	
+
+         
+
+
+ 
+      </div> <!-- end of container -->
+    
+ <?php  include('newsletter.php'); ?>
+ <?php  include('footer.php'); ?>
+
+
+
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/fontawesome.js"></script>
+
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+  </script>
+  <script src="https://www.google-analytics.com/analytics.js" async></script>
+</body>
+
+</html>
