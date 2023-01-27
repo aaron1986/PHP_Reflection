@@ -1,0 +1,279 @@
+@import './scss/partials/header',
+        './scss/partials/services',
+        './scss/partials/brand-background',
+        './scss/partials/articles',
+        './scss/partials/contact',
+        './scss/partials/newsletter',
+        './scss/partials/footer';
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  body {
+    font-size: 1rem;
+    letter-spacing: .4px;
+    color: #666;
+  }
+  
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    }
+
+
+   
+
+
+
+/*-------- MIN WIDTH ---------*/
+
+
+
+@mixin respond($breakpoint) {
+
+
+
+  @if $breakpoint == x-small {
+    @media (max-width: 37.5em) {
+  @content;
+    }
+  }
+
+ @if $breakpoint == small {
+  @media (min-width: 48.125em) {
+   @content;
+ }
+}
+@if $breakpoint == medium {
+  @media (min-width: 62em) {
+    @content;
+  }
+}
+@if $breakpoint == exlarge {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@if $breakpoint == ppp {
+  @media (min-width: 992px) and (max-width: 1259px) {
+    @content;
+  }
+}
+
+@if $breakpoint == yyy {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@if $breakpoint == fff {
+  @media (max-width: 769px) {
+    @content;
+  }
+}
+
+}
+@include respond(yyy) {
+  .search-form .form-control {
+    width: 20vw;
+  }
+}
+
+
+@include respond(ppp) {
+  .search-form .form-control {
+    display: none;
+  }
+}
+
+@include respond(fff) {
+ 
+  .container.header {
+    max-width: 100vw;
+  }
+
+  .btn.hamburger {
+    width:63px;
+    height: 56px;
+    margin-top: -65px;
+  }
+
+  span.fa.fa-search {
+    display: grid;
+    justify-items: end;
+margin-top: 2%;
+font-size: 20px;
+  }
+
+  span.fa.fa-phone {
+    margin-top: -5%;
+font-size: 25px;
+  }
+
+  .search-form .form-control {
+    width: 100vw;
+    margin-left: 20%;
+    margin-right: -13%;
+    background-color: rgba(0,0,0,.1);
+outline: 1px solid hsla(0,0%,100%,.2);
+border: 2px solid rgba(0,0,0,.1);
+transition: none;
+padding-right: 40px;
+  }
+  .search-form #search-submit {
+   display: none;
+  }
+
+  #show_bg {
+  display: none;
+
+  }
+
+  .container.services, .container.services-second-row, .container.articles  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 550px);
+    justify-content: space-between;
+  }
+
+  .item-1, .block-software, .item-2, .block-it, .item-3, .block-digital, .item-4, .block-telecoms, .item-5, .block-web, .item-6, .block-security  {
+    width: 100%;
+  }
+
+  .section.carousel {
+    display: none;
+  }
+
+  .container.section-background {
+    display: block;
+  }
+
+  .img-responsive, .articles-grid {
+    width: 100%;
+  }
+  .fas.fa-arrow-right {
+    display: none;
+  }
+
+  .container.news > h2 > a{ 
+    display: none;
+  }
+  label.required.email, input#newsletter-email.form-control {
+    margin-left: 0%;
+  }
+.offices {
+  display: flex;
+justify-content: space-between;
+width: 80vw;
+}
+
+}
+
+@include respond(exlarge) {
+form.search-form {
+  width: 300px;
+}
+}
+
+@include respond(x-small) {
+
+  .logo > img {
+    width: 300px;
+height: 70px;
+  }
+
+  .search-form .search-bar {
+    height: 56px;
+width: 200px;
+}
+   .text {
+    margin-top: -30%;
+
+    .h1 {
+      font-size: 4vw;
+  color: #fff;
+  font-weight: 600;
+  margin-left: 10%;
+    }
+    .bb {
+      font-size: 3vw;
+    }
+  }
+
+  .h1 > strong {
+    font-size: 1.5rem;
+  }
+
+  h2 > a {
+    font-size: 1.5rem;
+    margin-top: 4%;
+    }
+
+  label.required {
+    margin-left: 6%;
+    }
+    input#newsletter-name.form-control {
+      margin-left: 5%;
+      width: 200px;
+    }
+
+    input#newsletter-email.form-control {
+      width: 200px;
+    }
+
+  footer {
+    .footer-row {
+      display: block;
+     }
+    .services, .offices, .bottom  {
+      @include display-center;
+     }
+  }
+
+  }
+
+
+@include respond(small) {
+  .container.header {
+    display: flex;
+    justify-content: flex-start;
+   }
+   label.hidden {
+    margin-left: 20%;
+   }
+
+   .fa.fa-phone {
+    display: none;
+   }
+   span.fa.fa-search.icon {
+    display: none;
+   }
+}
+
+@include respond(medium) {
+   label.hidden {
+    margin-left: 0%;
+   }
+   .btn-support {
+    margin-left: 3%;
+   }
+
+   form.search-form {
+    width: 303px;
+   }
+
+   .footer-row {
+    display: flex;
+justify-content: space-between;
+   }
+
+   .container {
+    min-width: 1200px;
+    display: grid;
+}
+
+}
+

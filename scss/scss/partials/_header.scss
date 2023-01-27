@@ -1,0 +1,491 @@
+/*---------- VARIABLES ------------*/
+
+$btn-height: 56px;
+
+$web-btn: 47px;
+
+$btn-width: 135px;
+$btn-line-height:46px;
+$btn-background: #4183d7;
+$btn-color: #fff;
+$search-btn-width:100px;
+
+$font-body: Poppins, sans-serif;
+
+@mixin display-center {
+  display: grid;
+  justify-content: center;
+}
+
+@mixin btn {
+  height: auto;
+  width:127px;
+  line-height: 35px;
+  padding: 5px 15px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+}
+
+@mixin p {
+  line-height: 1.375rem;
+  font-size: .8125rem;
+}
+
+
+/*-------- SEARCH BAR -----------*/
+
+$search-width: 300px;
+
+/*--------------------------------*/
+
+header,  .inner {
+    background-color: $btn-color;
+    padding: 20px 0;
+  }
+
+  .actions {
+   float: right;
+    display: flex;
+    padding: 7px 0;
+    margin-left: 75px;
+    justify-content: space-evenly;
+  }
+
+.fa.fa-mouse, .fa.fa-paper-plane {
+  line-height: 46px;
+  font-size: 1rem;
+}
+ 
+  .logo > img {
+    width: 370px;
+    height: 64px;
+  }
+
+  .btn {
+    height: $btn-height;
+    width: $btn-width;
+    color: $btn-color;
+
+    &-support {
+        background-color: $btn-background;
+
+        &:hover {
+            background-color: #2a6ec6;
+            border-color: #2665b5;
+            color:$btn-color;
+        }
+    }
+    
+    &-contact {
+        background-color: #999aa2;
+        &:hover {
+            background-color: #84858f;
+            border-color: #797a85;
+            color:$btn-color;
+        }
+    }
+  }
+
+  a.btn {
+    font-size: 1rem;
+    margin-right: 20px;
+}
+
+
+  .search-form {
+    border-bottom-color: #ccc;
+    display: inline-flex;
+    height: $btn-height;
+    margin-right: 20px;
+    border-radius: none;
+
+    .search-bar {
+        height: $btn-height;      
+    }
+
+    #search-submit {
+      outline: none;
+      padding: 7px 20px 3px;
+      height: 56px;
+      font-size: 1.063rem;
+      border-radius: 0 3px 3px 0;
+      border: none;
+      vertical-align: bottom;
+      background-color: #999aa2;
+      color: #fff;
+    }
+    
+
+    .form-control {
+      width: 100vw;
+    }
+  }
+
+  span#gly-search.fa.fa-search{
+    font-size: 23px;
+    color: #fff;
+  }
+ 
+  #text {
+    display: flex;
+  }
+
+
+.btn.hamburger {
+  color: #fff;
+  background-color: #333645;
+  border-color: #333645;
+  width: 60px;
+  margin-left: 20px;
+}
+
+.btn.hamburger span {
+  width: 33px;
+  height: 12px;
+  position: relative;
+  display: flex;
+
+  }
+
+    .btn.hamburger span::before,
+    .btn.hamburger span::after {
+      content: '';
+      position: absolute;
+       width: 33px;
+      height: 4px;
+      background: #fff;
+      top: 50%;
+      line-height: 45px;
+  }
+  
+ 
+
+
+
+  
+
+   /*--------------- MAIN NAVIGATION -------------------*/
+
+  /* VARIABLES */
+  $navigation-color: #333645;
+
+  $software-color: #526781;
+  $it-color: #286abd;
+  $digital-color: #25a25a;
+  $telecoms-color: #bc2c28;
+  $web-color: #79539a;
+  $security-color: #de093f;
+
+  $developer-color: #a3331d;
+
+  @mixin container-size {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
+  @mixin links {
+    padding: .625rem .938rem;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    display: block;
+    line-height: 1.313rem;
+  }
+
+  @mixin naviagtion-header {
+    position: relative;
+    display: block;
+    color: #fff;
+    padding: 19px 0 18px;
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    text-decoration: none;
+    line-height: 1;
+  }
+
+  @mixin block {
+    display:block;
+  }
+
+  .main-navigation {
+    background-color: $navigation-color;
+    position: relative;
+    z-index: 100;
+    height: 99px;
+    text-align: center;
+
+  .container.main-navigation {
+    @include container-size;
+    }
+  }
+
+  span.fas.fa-bars, span.fas.fa-desktop, span.fas.fa-signal, span.fa.fa-phone-volume, span.fa-solid.fa-code, span.fa-solid.fa-shield, span.fa-solid.fa-graduation-cap, small {
+    @include block;
+    padding-bottom: 15px;
+  }
+
+  .main-navigation .container > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+   li {
+    flex: auto;
+    -webkit-flex: 1;
+    text-align: center;
+    position: relative;
+
+    a > span {
+        @include block;
+        padding-bottom: 10px;
+
+    }
+    
+    small {
+    @include block;
+    font-size: .625rem;
+    padding-bottom: 1px;
+    }
+
+     ul {
+      padding: .313rem 0;
+      display: none;
+      
+      
+      list-style: none;
+      border-radius: 0 0 .625rem .625rem;
+  }
+}
+  }
+
+/*--- navbar headings ----*/
+.main-navigation .container > ul > li > a {
+  @include naviagtion-header;
+  }
+
+
+  /*------- SOFTWARE---------- */
+ 
+
+  
+  ul > .bespoke > a:hover {
+    background-color: #67809f;
+    @include block;
+    .fas.fa-th {
+      color: #fff;
+    }
+  }
+  
+  ul > li:hover > ul.software {
+    @include block;
+    //@extend a:hover;
+    background-color: $software-color;
+  }
+  
+  .software > li > a {
+    @include links;
+    color: #fff;
+  }
+
+  .fas.fa-th {
+    color: #67809f;
+  }
+
+  /*------ IT ------------*/
+
+ul > .IT > a:hover {
+  background-color: #4183d7;
+  .fas.fa-desktop {
+    color: #fff;
+  }
+}
+
+ul > li:hover > ul.it {
+  @include block;
+  //@extend a:hover;
+  background-color: $it-color;
+}
+
+.it > li > a {
+  @include links;
+  color: #fff;
+}
+
+.fas.fa-desktop {
+  color: #4183d7;
+}
+
+/*---------- DIGITAL --------------*/
+
+ul > .marketing > a:hover {
+  background-color: #2ecc71;
+  .fa-solid.fa-chart-simple {
+    color: #fff;
+  }
+}
+
+ul > li:hover > ul.digital {
+  @include block;
+ // @extend a:hover;
+ background-color: $digital-color;
+
+}
+
+.digital > li > a {
+  @include links;
+  color: #fff;
+}
+
+.fa-solid.fa-chart-simple  {
+  color: #2ecc71;
+}
+
+
+/*-------- TELECOMS ---------*/
+
+ul > .services-nav > a:hover {
+  background-color: #d64541;
+  .fa.fa-phone-volume {
+    color: #fff;
+  }
+}
+
+ul > li:hover > ul.telecoms {
+  @include block;
+  //@extend a:hover;
+  background-color: $telecoms-color;
+}
+
+.telecoms > li > a {
+  @include links;
+  color: #fff;
+}
+
+.fa.fa-phone-volume  {
+  color: #d64541;
+}
+
+/*------- WEB --------*/
+
+ul > .web-design > a:hover {
+  background-color: #926fb1;
+  .fa-solid.fa-code {
+    color: #fff;
+  }
+}
+
+ul > li:hover > ul.web {
+  @include block;
+  //@extend a:hover;
+  background-color: $web-color;
+
+}
+
+.web > li > a {
+  @include links;
+  color: #fff;
+}
+
+.fa-solid.fa-code {
+  color: #926fb1;
+}
+
+/*-------- SECURITY ---------*/
+
+ul > .cyber > a:hover {
+  background-color: #f62459;
+  .fa.fa-shield {
+    color: #fff;
+  }
+}
+
+ul > li:hover > ul.security {
+  @include block;
+  //@extend a:hover;
+  background-color: $security-color;
+}
+
+.security > li > a {
+  @include links;
+  color: #fff;
+}
+.fa.fa-shield  {
+  color: #f62459;
+}
+
+/*--------- DEVELOPER ----------*/
+
+ul > .developer > a:hover {
+  background-color: #ce4125;
+  .fa-solid.fa-graduation-cap {
+    color:#fff;
+  }
+}
+
+ul > li:hover > ul.developer-course {
+  @include block;
+  //@extend a:hover;
+  background-color: #a3331d;
+}
+
+.developer-course > li > a {
+  @include links;
+  color: #fff;
+}
+
+.fa-solid.fa-graduation-cap {
+  color: #ce4125;
+}
+
+/*------ END OF NAV -----*/
+
+
+.img-cover {
+    width: 100%;
+    height: auto;
+    margin-top: -2%;
+    background-image: url('../img/home-oaVs.jpg');
+    
+    background-size: cover;
+  }
+
+  #show_bg {
+    background: linear-gradient(270deg,transparent 25%,#000), url('../img/home-oaVs.jpg');
+    width: 100%;
+    height: 600px;
+    margin-top: -2%;
+    background-size: cover;
+    color: white;
+    .h1 {
+     
+    font-size: 4rem;
+    line-height: 5rem;
+    margin: 0 0 1.25rem;
+    color: #fff;
+    font-weight: 600;
+    }
+    .bb {
+      font-size: 1.625rem;
+      line-height: 2.5rem;
+      margin-bottom: .375rem;
+      font-weight: 600;
+    }
+
+    .text.container {
+      position: relative;
+z-index: 4;
+padding: 3.75rem 0;
+  padding-top: 3.75rem;
+  padding-right: 0px;
+  padding-bottom: 3.75rem;
+  padding-left: 0px;
+    }
+  }
+
+
+

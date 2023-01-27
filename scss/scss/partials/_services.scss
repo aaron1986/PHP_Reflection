@@ -1,0 +1,1151 @@
+/*----------- VARIABLES -------------*/
+
+@mixin services-heading {
+  color: #333645;
+  font-size: 2.7rem;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-weight: 600;
+  margin-top: 25%;
+}
+
+@mixin span-icon {
+  height: 65px;
+  width: 65px;
+  margin: 0 auto 17px;
+  color: #fff;
+  border-radius: 50%;
+}
+
+@mixin block-squares {
+  text-decoration: none;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  box-shadow: 0 3px 35px rgba(0,0,0,.1);
+}
+
+
+@mixin btn {
+  height: auto;
+  padding: 5px 15px;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+  display: inline-block;
+margin-bottom: 0;
+font-weight: 400;
+text-align: center;
+vertical-align: middle;
+cursor: pointer;
+background-image: none;
+border: 1px solid transparent;
+text-transform: uppercase;
+
+}
+
+
+@mixin btn-container {
+  height: auto;
+  line-height: 35px;
+  text-transform: uppercase;
+  font-size: 1.063rem;
+  border-radius: 3px;
+  white-space: normal;
+}
+
+$services-color: #333645;
+$color: #fff;
+$software-color:#67809f;
+$it-color: #4183d7;
+$digital-color: #2ecc71;
+$telecoms-color: #d64541;
+$web-color: #926fb1;
+$security-color: #de093f;
+
+
+@mixin block {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0 3px 35px rgba(0,0,0,.1);
+  width:370px;
+  height: 314px;
+  border-radius: 15px;
+}
+
+@mixin block-small {
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0 3px 35px rgba(0,0,0,.1);
+  width:270px;
+  height: 314px;
+  border-radius: 15px;
+  }
+
+@mixin block-hover {
+  border-color: transparent;
+
+}
+
+@mixin btn-hover {
+  padding: 5px 15px;
+  border-radius: 0%;
+}
+
+@mixin grid-container{
+  display: grid;
+}
+
+@mixin hover {
+  border-radius: 15px;
+  position: relative;
+  transition: .5s ease;
+  box-shadow: 0 3px 35px rgba(0,0,0,.1);
+}
+
+/* ---------- Middle ------------ */
+
+
+.container.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 370px);
+  justify-content: space-between;
+} 
+
+.services-heading {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.our-services > strong {
+    font-weight: 600;
+  color: #333645;
+  margin-bottom: 10px;
+  font-size: 2.7rem;
+  margin-top: -13px;
+  }
+
+
+/* ------ ITEM-1 --------------*/
+
+.block-software {
+@include block;
+  &:hover {
+    color: #fff;
+border-color: transparent;
+top: -10px;
+transition: .5s ease;
+  }
+}
+
+.item-1 {
+  .block-software > span.icon span {
+    color: #fff;
+  }
+    text-decoration: none;
+    margin-top: 30px;
+    text-align: center;
+    width: 314px;
+
+    &:hover {
+      position: relative;
+      transition: all .5s;
+      transform : translateY(-10px);
+
+      .block-software > span.icon {
+        background-color: #fff;
+      }
+
+      .block-software > span.icon span {
+       color: #67809f;
+    }
+    .btn-software {
+      color: #67809f;
+      background-color: #fff;
+      border-color: #fff;
+     @include btn;
+    }
+  }
+}
+
+  .block-software > span {
+    display: block;
+  }
+
+.block-software > span.icon {
+    @include span-icon;
+    background-color: #67809f;
+  
+  }
+
+  .block-software > span.icon span {
+    font-size: 2rem;
+    line-height: 62px;
+   
+  }
+
+  .block-software > span.h2 {
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 0 11px;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .block-software > span.p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+  }
+
+  .btn-container {
+    line-height: 35px;
+    padding: 5px 15px;
+    text-transform: uppercase;
+    font-size: 1.063rem;
+    border-radius: 3px;
+    white-space: normal;
+  }
+
+  .btn-software {
+    color: #fff;
+    background-color: #67809f;
+    border-color: #67809f;
+   @include btn;
+  }
+
+  .block-software:hover > span.btn-container .btn {
+    border-color: #fff;
+    background-color: #fff;
+    color: #333645;
+  }
+
+  .block-software:hover, .block-software > span.icon {
+    background-color: #67809f;
+  }
+ 
+  /*--------- item-2 --------------*/
+
+  .block-it {
+  @include block;
+  &:hover {
+    color: #fff;
+border-color: transparent;
+top: -10px;
+transition: .5s ease;
+  }
+}
+
+
+.item-2 {
+  .block-it > span.icon span {
+    color: #fff;
+  }
+    @extend .item-1;
+    &:hover {
+      position: relative;
+      transition: all .5s;
+      transform : translateY(-10px);
+
+      .block-it > span.icon {
+        background-color: #fff;
+      }
+
+      .block-it > span.icon span {
+       color: #4183d7;
+    }
+    .btn-it {
+      color: #4183d7;
+      background-color: #fff;
+      border-color: #fff;
+     @include btn;
+    }
+  }
+}
+
+  .block-it > span {
+    display: block;
+  }
+
+.block-it > span.icon {
+  @include span-icon;
+    background-color: #4183d7;
+  
+  }
+
+  .block-it > span.icon span {
+    font-size: 2rem;
+    line-height: 62px;
+   
+  }
+
+  .block-it > span.h2 {
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 0 11px;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .block-it > span.p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+  }
+
+  .btn-it {
+    color: #fff;
+    background-color: #4183d7;
+    border-color: #4183d7;
+   @include btn;
+  }
+
+  .block-it:hover > span.btn-container .btn {
+    border-color: #fff;
+    background-color: #fff;
+    color: #4183d7;
+  }
+  
+  .block-it:hover, .block-it > span.icon {
+    background-color: #4183d7;
+  }
+
+/*--------- item-3 --------------*/
+
+.block-digital {
+  @include block;
+  &:hover {
+    color: #fff;
+border-color: transparent;
+top: -10px;
+transition: .5s ease;
+  }
+}
+
+.item-3 {
+  .block-digital > span.icon span {
+    color: #fff;
+  }
+    @extend .item-1;
+    &:hover {
+      position: relative;
+      transition: all .5s;
+      transform : translateY(-10px);
+
+      .block-digital > span.icon {
+        background-color: #fff;
+      }
+
+      .block-digital > span.icon span {
+       color: $digital-color;
+    }
+    .btn-digital {
+      color: $digital-color;
+      background-color: #fff;
+      border-color: #fff;
+     @include btn;
+    }
+  }
+}
+
+  .block-digital > span {
+    display: block;
+  }
+
+.block-digital > span.icon {
+  @include span-icon;
+    background-color: $digital-color;
+  
+  }
+
+  .block-digital > span.icon span {
+    font-size: 2rem;
+    line-height: 62px;
+   
+  }
+
+  .block-digital > span.h2 {
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 0 11px;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .block-digital > span.p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+  }
+
+  .btn-digital {
+    color: #fff;
+    background-color: $digital-color;
+    border-color: $digital-color;
+   @include btn;
+  }
+
+  .block-digital:hover > span.btn-container .btn {
+    border-color: #fff;
+    background-color: #fff;
+    color: $digital-color;
+  }
+  
+  .block-digital:hover, .block-digital > span.icon {
+    background-color: $digital-color;
+  }
+
+
+
+
+  .container.services-second-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 270px);
+    justify-content: space-between;
+  } 
+
+/*--------- item-4 --------------*/
+
+.block-telecoms {
+  @include block-small;
+  &:hover {
+    color: #fff;
+border-color: transparent;
+top: -10px;
+transition: .5s ease;
+  }
+}
+
+.item-4 {
+  .block-telecoms > span.icon span {
+    color: #fff;
+  }
+  text-decoration: none;
+  margin-top: 30px;
+  text-align: center;
+  width: 300px;
+    &:hover {
+      position: relative;
+      transition: all .5s;
+      transform : translateY(-10px);
+
+      .block-telecoms > span.icon {
+        background-color: #fff;
+      }
+
+      .block-telecoms > span.icon span {
+       color: $telecoms-color;
+    }
+    .btn-telecoms {
+      color: $telecoms-color;
+      background-color: #fff;
+      border-color: #fff;
+     @include btn;
+    }
+  }
+}
+
+  .block-telecoms > span {
+    display: block;
+  }
+
+.block-telecoms > span.icon {
+  @include span-icon;
+    background-color: $telecoms-color;
+  
+  }
+
+  .block-telecoms > span.icon span {
+    font-size: 2rem;
+    line-height: 62px;
+   
+  }
+
+  .block-telecoms > span.h2 {
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 0 11px;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .block-telecoms > span.p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+  }
+
+  .btn-telecoms {
+    color: #fff;
+    background-color: $telecoms-color;
+    border-color: $telecoms-color;
+   @include btn;
+  }
+
+  .block-telecoms:hover > span.btn-container .btn {
+    border-color: #fff;
+    background-color: #fff;
+    color: $telecoms-color;
+  }
+  
+  .block-telecoms:hover, .block-telecoms> span.icon {
+    background-color: $telecoms-color;
+  }
+
+/*--------- item-5 --------------*/
+
+.block-web {
+  @include block-small;
+  &:hover {
+    color: #fff;
+border-color: transparent;
+top: -10px;
+transition: .5s ease;
+  }
+}
+
+.item-5 {
+  .block-web > span.icon span {
+    color: #fff;
+  }
+  text-decoration: none;
+  margin-top: 30px;
+  text-align: center;
+  width: 300px;
+    &:hover {
+      position: relative;
+      transition: all .5s;
+      transform : translateY(-10px);
+
+      .block-web > span.icon {
+        background-color: #fff;
+      }
+
+      .block-web > span.icon span {
+       color:$web-color;
+    }
+    .btn-web  {
+      color: $web-color;
+      background-color: #fff;
+      border-color: #fff;
+     @include btn;
+    }
+  }
+}
+
+  .block-web > span {
+    display: block;
+  }
+
+.block-web > span.icon {
+  @include span-icon;
+    background-color: $web-color;
+  
+  }
+
+  .block-web > span.icon span {
+    font-size: 2rem;
+    line-height: 62px;
+   
+  }
+
+  .block-web > span.h2 {
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 0 11px;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .block-web > span.p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+  }
+
+  .btn-web {
+    color: #fff;
+    background-color: $web-color;
+    border-color: $web-color;
+   @include btn;
+  }
+
+  .block-web:hover > span.btn-container .btn {
+    border-color: #fff;
+    background-color: #fff;
+    color: $web-color;
+  }
+  
+  .block-web:hover, .block-web> span.icon {
+    background-color: $web-color;
+  }
+
+  /*--------- item-6 --------------*/
+
+.block-security {
+  @include block-small;
+  &:hover {
+    color: #fff;
+border-color: transparent;
+top: -10px;
+transition: .5s ease;
+  }
+}
+
+.item-6 {
+  .block-security > span.icon span {
+    color: #fff;
+  }
+  text-decoration: none;
+  margin-top: 30px;
+  text-align: center;
+  width: 300px;
+    &:hover {
+      position: relative;
+      transition: all .5s;
+      transform : translateY(-10px);
+
+      .block-security > span.icon {
+        background-color: #fff;
+      }
+
+      .block-security > span.icon span {
+       color:$security-color;
+    }
+    .btn-security {
+      color: $security-color;
+      background-color: #fff;
+      border-color: #fff;
+     @include btn;
+    }
+  }
+}
+
+  .block-security > span {
+    display: block;
+  }
+
+.block-security > span.icon {
+  @include span-icon;
+    background-color: $security-color;
+  
+  }
+
+  .block-security > span.icon span {
+    font-size: 2rem;
+    line-height: 62px;
+   
+  }
+
+  .block-security > span.h2 {
+    font-size: 1.3rem;
+    position: relative;
+    padding-bottom: 10px;
+    margin: 0 0 11px;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .block-security > span.p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+  }
+
+  .btn-security {
+    color: #fff;
+    background-color: $security-color;
+    border-color: $security-color;
+   @include btn;
+  }
+
+  .block-security:hover > span.btn-container .btn {
+    border-color: #fff;
+    background-color: #fff;
+    color: $security-color;
+  }
+  
+  .block-security:hover, .block-security > span.icon {
+    background-color: $security-color;
+  }
+
+
+/*
+
+.item-1:hover {
+  position: relative;
+  transition: all .5s;
+  transform : translateY(-10px);
+}
+
+.block-telecoms, .block-web, .block-security, .block-developer-course  {
+  @include block-squares;
+  width: 270px;
+  height: 313px;
+}
+
+span.h2 {
+  display: block;
+  font-size: 1.3rem;
+position: relative;
+padding-bottom: 10px;
+margin: 0 0 11px;
+color: $services-color;
+}
+
+span.p {
+ @include p;
+  margin-bottom: 13px;
+  font-weight: 400;
+  color: $services-color;
+}
+
+
+span.icon > .fas.fa-bars {
+  @include span-icon;
+  background-color: $software-color;
+}
+
+span.icon > .fas.fa-desktop {
+  @include span-icon;
+  background-color: $it-color;
+}
+
+span.icon > .fas.fa-signal {
+  @include span-icon;
+  background-color: $digital-color;
+}
+
+span.icon > .fa-solid.fa-phone {
+  @include span-icon;
+  background-color: $telecoms-color;
+}
+
+span.icon > .fa-solid.fa-code {
+  @include span-icon;
+  background-color: $web-color;
+}
+
+span.icon > .fa-solid.fa-shield {
+  @include span-icon;
+  background-color: $security-color;
+}
+
+span.icon > .fa-graduation-cap {
+  @include span-icon;
+  background-color: $telecoms-color;
+}
+
+span.btn-software, span.btn-it, span.btn-digital, span.btn-telecoms, span.btn-web, span.btn-security, span.btn-developer-course {
+  @include btn;
+ }
+
+.btn-software {
+  @include btn;
+  color: #fff;
+  background-color: $software-color;
+  border-color: $software-color;
+ 
+}
+
+.btn-it {
+  @include btn;
+  color: #fff;
+  background-color: $it-color;
+  border-color: $it-color;
+
+}
+
+.btn-digital {
+  @include btn;
+  color: #fff;
+  background-color: $digital-color;
+  border-color: $digital-color;
+ 
+}
+
+.btn-telecoms {
+  @include btn;
+  color: #fff;
+  background-color: $telecoms-color;
+  border-color: $telecoms-color;
+
+}
+
+.btn-web {
+  @include btn;
+  color: #fff;
+  background-color: $web-color;
+  border-color: $web-color;
+
+}
+
+.btn-security {
+  @include btn;
+  color: #fff;
+  background-color: $security-color;
+  border-color: $security-color;
+
+}
+
+.btn-developer-course {
+  @include btn;
+  color: #fff;
+  background-color: $telecoms-color;
+  border-color: $telecoms-color;
+
+}
+
+
+
+
+
+
+.block.software {
+  background-color: $color;
+  color: $software-color;
+  @include block;
+  span.p {
+    font-size: .8125rem;
+    line-height: 1.375rem;
+    margin-bottom: 13px;
+    font-weight: 400;
+    font-family: Poppins,sans-serif;
+  }
+  &:hover {
+      @extend .btn-software;
+      
+      span.h2, span.p {
+        color: #fff;
+      }
+      span.icon > .fas.fa-bars {
+        background-color: #fff;
+        color: $software-color;
+      }
+      .btn-software {
+        color: $software-color;
+        background-color: #fff;
+      }
+  }
+}
+.block-it {
+  background-color: $color;
+  color: $it-color;
+  @include block;
+  &:hover {
+      @extend .btn-it;
+      
+      span.h2, span.p {
+        color: #fff;
+      }
+      span.icon > .fas.fas.fa-desktop {
+        background-color: #fff;
+        color: $it-color;
+      }
+      .btn-it {
+        color: $it-color;
+        background-color: #fff;
+      }
+  }
+}
+.block-digital {
+  background-color: $color;
+  color: $digital-color;
+  @include block;
+  &:hover {
+      @extend .btn-digital;
+      
+      background-color: $digital-color;
+      span.h2, span.p {
+        color: #fff;
+      }
+      span.icon > .fas.fa-signal {
+        background-color: #fff;
+        color: $digital-color;
+      }
+      .btn-digital {
+        color: $digital-color;
+        background-color: #fff;
+      }
+  }
+}
+
+.block-telecoms{
+  background-color: $color;
+  color: $telecoms-color;
+  @include block;
+  &:hover {
+      @extend .btn-telecoms;
+    
+      background-color: $telecoms-color;
+      span.h2, span.p {
+        color: #fff;
+      }
+      .btn-telecoms {
+        color: $telecoms-color;
+        background-color: #fff;
+      }
+      span.icon > .fa-solid.fa-phone {
+        background-color: #fff;
+        color: $telecoms-color;
+      }
+  }
+}
+
+.block-web{
+  background-color: $color;
+  color: $web-color;
+  @include block;
+  &:hover {
+      @extend .btn-web;
+     
+      background-color: $web-color;
+      span.h2, span.p {
+        color: #fff;
+      }
+      span.icon > .fa-solid.fa-code {
+        color: $web-color;
+        background-color: #fff;
+      }
+      .btn-web {
+        color: $web-color;
+        background-color: #fff;
+      }
+  }
+}
+
+.block-security{
+  background-color: $color;
+  color: $security-color;
+  @include block;
+  &:hover {
+      @extend .btn-security;
+     
+      background-color: $security-color;
+      span.h2, span.p {
+        color: #fff;
+      }
+      span.icon > .fa-solid.fa-shield {
+        color: $security-color;
+        background-color: #fff;
+      }
+      .btn-security {
+        color: $security-color;
+        background-color: #fff;
+      }
+  }
+}
+
+.block-developer-course{
+  background-color: $color;
+  color: $telecoms-color;
+  @include block;
+  &:hover {
+      @extend .btn-developer-course;
+    
+      background-color: $telecoms-color;
+      span.h2, span.p {
+        color: #fff;
+      }
+      span.icon > .fa-graduation-cap {
+        color: $telecoms-color;
+        background-color: #fff;
+      }
+      .btn-developer-course {
+        color: $telecoms-color;
+        background-color: #fff;
+      }
+  }
+}
+
+*/
+
+ /* ------- CAROUSEL --------- */
+
+ .greyscale {
+  filter: grayscale(100%);
+  &:hover {
+    filter: grayscale(0%);
+  }
+}
+
+.section.carousel {
+  padding-top: 5%;
+  padding-bottom: 50px;
+  position: relative;
+  display: flex;
+  z-index: 100;
+  justify-content: space-evenly;
+}
+
+@mixin tooltip {
+  visibility: hidden;
+  background-color: #333645;
+  color: #fff;
+  padding: 20px;
+  font-size: .875rem;
+  max-width: 260px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+@mixin hover {
+  visibility: visible;
+}
+
+@mixin h3 {
+  position: relative;
+  font-size: 1.125rem;
+  color: #fff;
+  padding-bottom: 17px;
+  margin: 0 0 11px;
+  text-align: center;
+}
+
+@mixin text_underline {
+  text-decoration: underline white 3px;
+  text-underline-offset: 1em;
+}
+
+@mixin p {
+  font-size: .8125rem;
+  line-height: 1.375rem;
+  margin-bottom: 0;
+text-align: center;
+}
+
+@mixin tooltip_after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -40px;
+  border-width: 35px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.company-logo .tooltiptext {
+@include tooltip;
+margin-top: -12%;
+}
+
+.company-logo:hover .tooltiptext {
+  @include hover;
+}
+
+.company-logo:hover .tooltiptext h3 {
+  @include h3;
+  @include text_underline;
+}
+
+
+.company-logo:hover .tooltiptext p {
+  @include p;
+}
+
+
+
+.company-logo .tooltiptext::after {
+  @include tooltip_after;
+}
+
+
+.company-logo .tooltiptext_2 {
+@include tooltip;
+  margin-left: -19%;
+}
+
+.company-logo:hover .tooltiptext_2 {
+  @include hover;
+  margin-top: -14%;
+}
+
+.company-logo .tooltiptext_2::after {
+  @include tooltip_after;
+}
+
+.company-logo:hover .tooltiptext_2 h3 {
+  @include h3;
+  @include text_underline;
+}
+
+
+.company-logo:hover .tooltiptext_2 p {
+  @include p;
+}
+
+
+
+.company-logo .tooltiptext_3 {
+  @include tooltip;
+  margin-left: -9%;
+}
+
+
+.company-logo:hover .tooltiptext_3 {
+  @include hover;
+  margin-top: -12%;
+}
+
+.company-logo .tooltiptext_3::after {
+  @include tooltip_after;
+}
+
+.company-logo:hover .tooltiptext_3 h3 {
+ @include h3;
+ @include text_underline;
+}
+
+
+.company-logo:hover .tooltiptext_3 p {
+  @include p;
+}
+
+
+.company-logo .tooltiptext_4 {
+  @include tooltip;
+  margin-left: -18%;
+}
+
+.company-logo:hover .tooltiptext_4 {
+  @include hover;
+  margin-top: -12%;
+}
+
+.company-logo .tooltiptext_4::after {
+ @include tooltip_after;
+}
+
+.company-logo:hover .tooltiptext_4 h3 {
+  @include h3;
+  @include text_underline;
+}
+
+
+.company-logo:hover .tooltiptext_4 p {
+ @include p;
+}

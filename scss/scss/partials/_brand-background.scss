@@ -1,0 +1,123 @@
+/*---- VARIABLES ----*/
+@mixin inverse {
+  color: $color;
+  background-color: $btn-color;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-size: 20px;
+  width: 200px;
+  text-transform: uppercase;
+}
+
+@mixin btn-center {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+
+$brand-color: #333645;
+$btn-color: #272936;
+$color: #fff;
+$btn-google: #4387f6;
+$btn-trustpiolet: #00b67b;
+
+
+/*------ Brand Background --------- */
+
+.brand-background {
+  background-color: $brand-color;
+  padding-top:2%;
+  padding-bottom: 3%;
+  }
+
+  .container.section-background {
+  display: flex;
+  }
+
+  @media screen and (max-width: 500px) {
+    .container.section-background {
+      display: inline;
+      }
+
+      .article-list {
+        display: block;
+      }
+  }
+  
+  .col-md-6 > .h1 > strong {
+  color: $color !important;
+  font-weight: 600;
+  margin-top: -6px;
+  font-size: 2.25rem;
+  }
+
+  strong > a {
+      color: $color;
+      &:hover {
+        text-decoration: underline;
+        color: $color;
+      }
+
+  }
+  
+  .col-md-6 > p {
+    width: 100%;
+    line-height: 1.875rem;
+    color: $color !important;
+    margin-top: 40px;
+  }
+
+  .fa.fa-star {
+    margin-top: 40px;
+  }
+  
+ 
+  .btn.btn-primary-inverse {
+    @include inverse;
+    @include btn-center;
+    &:hover {
+      background-color: darken($btn-color, 15%);
+    }
+  }
+  
+  span.client-quote {
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+  
+  span.client-quote-author {
+    @extend span.client-quote;
+    color: #a3a8ac;
+  }
+  
+  .buttons-google {
+    display: flex;
+  }
+
+  .fas.fa-arrow-right {
+    padding-left: 10px;
+  }
+
+  a.btn.btn-primary {
+      font-size: 1.2rem;
+      width: 263px;
+      height:55px;
+      text-transform: uppercase;
+      border-radius: 6px;
+      @include btn-center;
+      &.btn-google {
+          background-color: $btn-google;
+          margin-right: 8px;
+          &:hover {
+            background-color: darken($btn-google, 15%);
+          }
+      }
+
+      &.btn-trustpilot {
+          background-color: $btn-trustpiolet;
+          &:hover {
+              background-color: darken($btn-trustpiolet, 15%);
+          }
+      }
+  }
